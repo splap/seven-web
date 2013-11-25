@@ -1,0 +1,40 @@
+div#modal-container data-client-name='arc9'
+  div#modal-header
+    | ARC9
+    a.close
+    a.next
+    a.prev
+  div#work-cats
+    span
+      h3 Services
+      ul
+        / li Cloud Achitecture Evaluation,
+        / li Dev Ops Advice
+        li Cloud Architecture,
+        li DevOps
+    span
+      h3 Platforms
+      ul
+        li AWS,
+        li Windows,
+        li Linux
+    span
+      h3 Technologies
+      ul
+        li Ruby on Rails,
+        li Puppet
+  div.clearfix
+  p.summary
+    | ARC9, the Cloud Collaboration platform for Creatives, chose to build their platform with AWS instead of a traditional colocation facility. Rather than hiring in house Cloud expertise, 7x7 provided the nessesary know-how and will continue to support ARC9 as they scale.
+  img src="/images/work/arc9_story.jpg" alt="movie production process, film studio"
+  h2 Overview
+  p.description
+    | After an initial evaluation engagement, 7x7 produced a report outlining steps ARC9 could take to strengthen their Cloud infrastructure. The report described specific techniques for scripted server and application deployment, automatic AWS availability zone failover, systems monitoring, autoscaling, and development lifecycle management.
+  p.description
+    | 7x7's Architecture Evalulation Reports are written such that they provide a roadmap for development by in-house staff, a Statement of Work for a contract with 7x7 Labs, or the basis of a RFP for outside firms.
+  div.bottom-nav
+    span
+      a.prev
+    span
+      a.next
+== render :slim, :'work/_related'

@@ -1,0 +1,47 @@
+div#modal-container data-client-name='tippoint'
+  div#modal-header
+    | Tipping Point
+    a.close
+    a.next
+    a.prev
+  div#work-cats
+    span
+      h3 Services
+      ul
+        li Website Audit,
+        li Development,
+        li Maintanence
+    span
+      h3 Platforms
+      ul
+        li Heroku
+    span
+      h3 Technologies
+      ul
+        li Javascript,
+        li HTTrack,
+        li HTML,
+        li CSS
+  div.clearfix
+  p.summary
+    | Tipping Point Community reached out to 7x7 Labs for an audit of their website. We identified areas of concern, discussed their importance, and agreed on a course of action. 7x7 implemented the desired changes under a tight deadline and has provided ongoing support as needed.
+  img src="/images/work/tpc_story.jpg" alt="non-profit, philanthropy, audit of website"
+    div#quote
+      span#quote-headshot
+        img src="/images/amy_headshot.jpg" alt="headshot amy"
+      span#quote-arrow
+        img src="/images/quote_arrow.png"
+      span#quote-body
+        p
+          | “7x7 Labs was incredibly responsive and knowledgeable when we were troubleshooting issues with our website; they were able to explain the issues to us and our options for solving them.”
+        p
+          | – Amy Omand
+          br
+          | Director of Operations, Tipping Point
+  div.clearfix
+  div.bottom-nav
+    span
+      a.prev
+    span
+      a.next
+== render :slim, :'work/_related', locals: { foo: 'bar' }

@@ -1,0 +1,679 @@
+@mixin slide-element($index, $top, $left, $shadow) {
+  p:nth-child(#{$index}) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    text-shadow: $shadow;
+  }
+}
+
+@mixin section-layout($section-name, $section-height) {
+  height: $section-height;
+
+  .section-bg-layer {
+    width: 980px;
+    height: $section-height;
+    overflow-x: visible;
+
+    .bg { height: $section-height; }
+
+    img { position: relative; }
+
+    .left {
+      top: 0px;
+      right: 714px;
+      width: 490px;
+    }
+    .middle { 
+      top: -$section-height;
+      width: 940px;
+    }
+
+    div {
+      height: $section-height;
+      background-image: url('/images/' + $section_name + '_background_1x1.jpg?embed');
+      position: relative;
+      top: $section-height * -2; 
+      left: 960px;
+      width: 0px;
+    }
+
+    #sf-right {
+      background-image: url('/images/hero_right_490X540.jpg?v=2');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .section-top-layer {
+    height: $section-height;
+    top: -$section-height;
+  }
+}
+
+@mixin nav-hover($anchor-name, $sprite-name) {
+    #modal-header a.#{$anchor-name} {
+      display: inline-block;
+      width: 35px;
+      height: 40px;
+      background-image: url(/images/#{$sprite-name});
+      background-position: bottom;
+    }
+    #modal-header a.#{$anchor-name}:hover {
+      background-position: top;
+    }
+}
+
+@font-face {
+    font-family: 'armata_ff';
+    src: url('/fonts/armata-regular-webfont.eot?embed');
+    src: url('/fonts/armata-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/armata-regular-webfont.woff?embed') format('font/x-woff'),
+         url('/fonts/armata-regular-webfont.ttf') format('truetype'),
+         url('/fonts/armata-regular-webfont.svg#armata_font_face?embed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sans_regular_ff';
+    src: url('/fonts/OpenSans-Regular-webfont.eot?embed');
+    src: url('/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/OpenSans-Regular-webfont.woff?embed') format('font/x-woff'),
+         url('/fonts/OpenSans-Regular-webfont.ttf?embed') format('truetype'),
+         url('/fonts/OpenSans-Regular-webfont.svg#open_sans_regular_ff?embed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sans_light_ff';
+    src: url('/fonts/OpenSans-Light-webfont.eot?embed');
+    src: url('/fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/OpenSans-Light-webfont.woff?embed') format('font/x-woff'),
+         url('/fonts/OpenSans-Light-webfont.ttf?embed') format('truetype'),
+         url('/fonts/OpenSans-Light-webfont.svg#open_sans_light_ff') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sans_italic_ff';
+    src: url('/fonts/OpenSans-Italic-webfont.eot?embed');
+    src: url('/fonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/OpenSans-Italic-webfont.woff?embed') format('font/x-woff'),
+         url('/fonts/OpenSans-Italic-webfont.ttf?embed') format('truetype'),
+         url('/fonts/OpenSans-Italic-webfont.svg#open_sans_italic_ff') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.section-top-layer {
+  position: relative;
+}
+.margin-fix {
+  margin-left: 0px;
+}
+.img-preload {
+  display: none;
+}
+
+body {
+  padding-top: 60px;
+  font-family: "Open Sans", open_sans_regular_ff, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff ;
+  background-color: #000;
+  min-width: 960px;
+  text-align: center;
+  overflow-x: hidden;
+  
+}
+
+
+h1 {
+  font-size: 37px;
+  padding: 27px 0 20px 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-family: "Armata", armata_ff, sans-serif;
+}
+
+// worth customizing this in bootstrap?
+label, input, button, select, textarea {
+  font:normal 16px "Open Sans", open_sans_regular_ff, sans-serif;
+}
+
+.navbar {
+  min-width: 960px;
+  
+  .section-top-layer {
+    height: 60px;
+    top: -60px;
+  }
+  .container { height: 60px; }
+
+  .nav-item {
+    display:inline-block;
+    padding: 10px 27px 0px 26px;
+  }
+
+  font: {
+    family: "Armata", armata_ff, sans-serif;
+    size: 0px;
+    weight: 200;
+  }
+
+  .logo-nav-item {
+    width: 425px;
+    height: 58px;
+    border-top: 2px solid #333;
+    text-align: left;
+    a {
+      position: relative;
+      top: 8px;
+      right: 0px;
+    }
+  }
+
+  .nav-item, .logo-nav-item {
+    border-top: 2px solid #333;
+    vertical-align: top;
+    cursor: pointer;
+  }
+
+  .nav-item {
+    text-align: center;
+  }
+
+  img#header-background {
+    max-width: 1920px;
+    position: relative;
+    right: 470px;
+    vertical-align: top;
+    height: 60px;
+  }
+
+  ul {
+    padding: 0px;
+    margin-left: 0px;
+    font-size: 0px;
+    display:inline-block;
+    list-style-type: none;
+
+    li {
+      font-size: 15px;
+      line-height: 30px;
+      display:inline-block;
+      vertical-align: top;
+      text-align: center;
+      
+    }
+
+    a, a.link, a.visited { color: #999; }
+    a:hover { color: #ff4200; text-decoration: none;}
+    
+    .active-nav { 
+      border-top: 2px solid #666;
+      background-color: #121212;
+      a {
+        color: #ffffff; 
+        text-decoration: none;
+      }
+    }
+
+    .hover-nav {
+      border-top: 2px solid #ff4200;
+      background-color: #121212;
+      a {
+        color: #ff4200;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+div.sf {
+  @include section-layout('sf', 540px);
+
+
+
+  h2 {
+    color: #ff4200;
+    font-size: 34px;
+    line-height: .75; 
+  }
+  h3 {
+    color: #fff;
+    font-size: 1.7em;
+    margin-top: 16px;
+    line-height: .5; 
+  }
+
+
+  .logo {
+    padding: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-container {
+    font: {
+      family: "Armata", armata_ff, sans-serif;
+      weight: 400;
+    }
+    text-align: center;
+    padding: 375px 0 0 0;
+  }
+
+}
+
+div.services {
+  @include section-layout('services', 700px);
+  color: #FFF;
+
+
+  h1 { 
+    color: #FFF;
+    padding-bottom: 0px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 4px;
+  }
+
+  p.icon {
+    min-height: 140px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-top: 7px;
+  }
+
+  .service.row {
+    margin-bottom: 35px;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+div.work {
+  @include section-layout('work', 950px);
+
+  ul { 
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display:inline-block;
+    list-style-type: none;
+    color: #999999;
+    margin: 0px;
+  }
+
+  h2, h3 {
+    margin: 0;
+  }
+
+  #big-summary {
+    h2 {
+      padding: 15px 0;
+      font-size: 1.2em;
+    }
+    li {
+      font-size: .9em;
+      line-height: 25px;
+    }
+
+    #work-hover {
+      padding: 20px 30px;
+      font-size: 1.3em;
+    }
+  }
+
+  .three-col {
+    padding: 20px 0 0 0;
+
+    h3 {
+      padding: 10px 0;
+      font-size: .9em;
+    }
+
+    li {
+      font-size: .7em;
+      line-height: 20px;
+    }
+
+    #work-hover {
+      padding: 10px 15px;
+      font-size: 1.1em;
+    }
+  }
+
+  .work-container, .span4 {
+    background-color: #FFF;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #work-hover-template { display: none; }
+
+  #work-hover {
+    position: relative;
+    float: left;
+    background-color: #ff4200;
+    color: #FFF;
+    opacity: 1;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+  }
+
+  .modal.fade.in, .modal {
+    position: relative;
+  }
+
+  .modal, .modal-body { padding: 0; margin: 0; border: 0; }
+
+  .modal-body {
+    background-color: #FFF;
+    background-image: url(/images/modal_sidebar.png);
+    background-repeat: repeat-y;
+    max-height: 100%;
+    max-width: 100%
+  }
+
+  #modal-container {
+    margin-left: 100px;
+  }
+
+  #work-modal {
+    left: 80px;
+    width: 820px;
+    border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;
+    box-shadow: 0 0 0 #000; -webkit-box-shadow: 0 0 0 #000;
+    text-align: left;
+    overflow-y: scroll;
+
+    @include nav-hover('prev', 'left_chev.png?embed');
+    @include nav-hover('next', 'right_chev.png?embed');
+    @include nav-hover('close', 'close.png?embed');
+
+    #modal-header {
+      font-size: 28px;
+      letter-spacing: 3px;
+      vertical-align: middle;
+      padding: 20px 20px 25px 0;
+      line-height: 40px;
+
+      a { position: relative; float: right; }
+    }
+
+    h3 {font-size: 18px;}
+
+    #work-cats {
+      width: 720px;
+      span {
+        float: left;
+        height: 80px;
+        background-color: #f2f2f2;
+        width: 220px;
+        margin-right: 20px;
+        h3 {
+          color: #ff4200;
+          margin: 10px 0 0 10px;
+        }
+        ul {
+          padding: 0px;
+          font-size: 12px;
+          color: #999999;
+          margin: 5px 0 0 10px;
+        }
+        li {
+          display:inline-block;
+          list-style-type: none;
+        }
+      }
+    }
+
+    p { padding-right: 20px; }
+
+    p.summary {
+      color: #ff4200;
+      font:italic 16px "Open Sans", open_sans_regular_ff, sans-serif;
+      margin: 17px 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin: 20px 0 0 20px;
+    }
+
+    p.description {
+      color: #666666;
+      font:normal 14px "Open Sans", open_sans_regular_ff, sans-serif;
+      margin-top: 14px;
+    }
+
+    .bottom-nav {
+      margin-top: 25px;
+      .next {
+        float: right;
+        padding-right: 20px;
+      }
+      cursor: pointer;
+      font: normal 18px "Armata", armata_ff, sans-serif;
+      a { color: #ff4200; }
+    }
+
+  #related {
+    margin: 20px 0 0 80px;
+    padding: 20px 0 0 20px;
+    background-color: #f2f2f2;
+    div { padding: 10px 0 20px 0;}
+
+    .related-item {
+      padding-right: 20px;
+      display: none;
+      cursor: pointer;
+    }
+  }
+
+  #quote span {
+    float: left;
+    display: block;
+    margin-top: 20px;
+  }
+
+  #quote-headshot img {
+    width: 144px;
+    height: 144px;
+  }
+
+  #quote-arrow img {
+    margin: 50px 0 0 10px;
+  }
+
+  #quote-body {
+    width: 500px;
+    background-color: #eeeeee;
+    padding: 20px 18px 0 18px;
+    min-height: 124px; // sketchy magic number...
+    p {
+      padding-right: 0px;
+      color: #999999
+    }
+  }
+  }
+}
+
+.bio-container {
+  position:relative;
+  height: 650px;
+}
+
+div.about {
+  @include section-layout('about', 1020px);
+  h1 {
+    text-align: center;
+    color: #ff4200;
+  }
+  .section-top-layer { text-align: left; } 
+
+  .title {
+    background-color: #000;
+
+    padding: 5px 0 5px 10px;
+    font-size: 18px;
+  }
+
+  p {
+    margin: 0px;
+    padding: 5px 15px 10px 15px;
+    font-size: 14px;
+    color: #000;
+  }
+  
+  .bio {
+    margin-top: 10px;
+    background-color: #333333;
+    p {
+      color: #FFF;
+      font-weight: 100;
+      font-size: 13px;
+    }
+
+    .logos {
+      position: absolute;
+      top: 240px;
+      right: 0px;
+      img { 
+        margin: 0 10px 0 0; 
+        padding: 0;
+      }
+    }
+  }
+
+  .headline {
+    height: 45px;
+  }
+
+  #founders {
+    padding-top: 25px;
+  }
+
+  .bio-headshot {
+  }
+
+  .bio-name {
+    font-family: "Armata", armata_ff, sans-serif;
+    margin-left: 20px;
+    //line-height: 20px;
+    margin: 20px 0 0 15px;
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+  .bio-title {
+    // position: absolute;
+    // top: 17px;
+    // right: 15px;
+    // font-size: 16px;
+    // float: right;
+    margin: 5px 0 0 15px;
+  }
+}
+
+
+div.contact {
+  @include section-layout('contact', 620px);
+  .section-top-layer { text-align: left; } 
+
+  h1 { text-align: center; }
+
+  .content-row { color: #000; }
+
+  // must use an underscore in this element name, otherwise the Google Maps API renders kinda funky.
+  #map_canvas {
+    height: 490px;
+    width: 460px;
+  }
+
+  form {
+    input[type="text"] {
+      background-color: #eeeeee;
+      border: none;
+      height: 37px;
+    }
+    textarea {
+      background-color: #eeeeee;
+      border: none;
+      line-height: 2;
+    }
+    textarea, input {
+      width: 447px;
+    }
+  }
+
+
+  .address {
+    color: #bbbbbb;
+    font-size: 28px;
+    font-weight: lighter;
+    margin-top: 20px;
+    line-height: 1.25;
+  }
+
+  .btn {
+    background-image: linear-gradient(to bottom, #ff4200, #ff4200);
+    background-color: #ff4200;
+    color: white;
+  }
+
+  .submit {
+    height: 50px;
+    font-size: 25px;
+    width: 460px;
+  }
+}
+
+
+.work, .contact {
+  color: #ff4200;
+}
+
+div.footer {
+  @include section-layout('footer', 60px);
+  color: #fff;
+
+  span.copyright {
+    position: absolute;
+    left: 93px;
+    bottom: -40px;
+    font: normal 11px "Armata", armata_ff, sans-serif;
+    letter-spacing: 0.3px;
+    text-align: right;
+    color: #a3a3a3;
+    margin-top: 30px;
+  }
+  .social img {
+    float: right;
+    margin: 20px 0 0 10px
+  }
+
+  div.logo { text-align: left; }
+
+  img.logo { margin-top: 13px; }
+}

@@ -1,0 +1,338 @@
+div class="navbar navbar-fixed-top"
+  div#navbar-inner
+    div.container
+      img#header-background src="/images/header_background.png"
+      div.section-top-layer
+        ul#nav#pull-right
+          li
+            div.logo-nav-item
+              a href="/seven.html#sf"
+                == img "/images/logo_nav.png", { class: 'small-logo' }
+          li
+            div.nav-item
+              a href="/seven.html#services" SERVICES
+          li
+            div.nav-item
+              a href="/seven.html#work" OUR WORK
+          li
+            div.nav-item
+              a href="/seven.html#about" ABOUT US
+          li
+            div.nav-item
+              a href="/seven.html#contact" CONTACT
+div.container
+  div.row
+    div class="sf span12"
+      div.section-bg-layer
+        == img "/images/hero_left_490X540.jpg", { class: "left" }
+        == img "/images/hero_middle_940X540.jpg", { class: "middle" }
+        div#sf-right
+      div.section-top-layer
+        a#sf
+        div.row
+          div.text-container
+            h2 We create web and mobile experiences
+            h3 Built in San Francisco, deployed everywhere
+  div.row
+    div class="services span12"
+      div.section-bg-layer
+        == img "/images/services_background_1x1.jpg", { class: "left bg" }
+        == img "/images/services_background_1x1.jpg", { class: "middle bg" }
+        div.right
+      div.section-top-layer
+        a#services
+        div class="service row"
+          div.span12
+            h1 SERVICES
+        div class="service row"
+          div.span4
+            p.icon
+              == img "/images/projector_icon.png"
+            h3
+              | Brand &amp; Marketing Strategy
+            p
+              | You have an idea, we’ll build you an empire
+          div.span4
+            p.icon
+              == img "/images/laptop_icon.png"
+            h3
+              | Web Design &amp; Development
+            p
+              | Sites, portals, intranets, we’ve got you covered
+          div.span4
+            p.icon
+              == img "/images/mobile_icon.png"
+            h3
+              | Mobile Sites &amp; Apps
+            p
+              | Connect with your customers...anywhere
+        div class="service row"
+          div.span4
+            p.icon
+              == img "/images/design_icon.png"
+            h3
+              | Agile Development Strategies
+            p
+              | Quick iterations, tight client feedback loop
+          div.span4
+            p.icon
+              == img "/images/arch_rev_icon.png"
+            h3
+              | Architecture Review
+            p
+              | Application and cloud infrastructure evaluation
+          div.span4
+            p.icon
+              == img "/images/staff_icon.png"
+            h3
+              | Staff Augmentation
+            p
+              | When you just need some bodies...
+          
+  div.row
+    div class="work span12"
+      div.section-bg-layer
+        == img "/images/work_background_1x1.jpg", { class: "left bg" }
+        == img "/images/work_background_1x1.jpg", { class: "middle bg" }
+        div.right
+      div.section-top-layer
+        a#work
+        div.row
+          div.span12
+            h1 OUR WORK
+        div#big-summary.row
+          div.span6
+            div#smile.work-container
+              h2 Smile by Webshots
+              == img "/images/work/smile_title.jpg", { alt: "family photo sharing" }
+              ul
+                li Rails,
+                li REST,
+                li iOS,
+                li EC2,
+                li Chef,
+                li Sidekiq
+          div.span6
+            div#whatsgood.work-container
+              h2 WhatsGOOD
+              == img "/images/work/whatsgood_title.jpg", { alt: "whatsgood, iOS screenshots" }
+              ul
+                li iOS,
+                li Objective-C
+        div class="row three-col"
+          div.span4
+            div#enrapt.work-container
+              h3 Enrapt
+              == img "/images/work/enrapt_title.jpg", { alt: "japanese salarymen" }
+              ul
+                li iOS,
+                li Javascript,
+                li REST,
+                li HTML5
+          div.span4
+            div#stealth.work-container
+              h3 Stealthy Co.
+              == img "/images/work/stealthy_title.jpg", { alt: "current image fine, open to new" }
+              ul
+                li Python,
+                li Flask,
+                li App Engine
+          div.span4
+            div#tippoint.work-container
+              h3 Tipping Point
+              == img "/images/work/tpc_title.jpg", { alt: "fighting poverty in the bay area" }
+              ul
+                li HTML5,
+                li Heroku
+        div class="row three-col"
+          div.span4
+            div#arc9.work-container
+              h3 ARC9
+              == img "/images/work/arc9_title.jpg", { alt: "file production tools" }
+              ul
+                li DevOps,
+                li IaaS
+          div.span4
+            div#livefyre.work-container
+              h3 Livefyre
+              == img "/images/work/livefyre_title.jpg", { alt: "social commenting" }
+              ul
+                li iOS,
+                li Objective-C
+          div.span4
+            div#sso.work-container
+              h3 Google Apps SSO
+              == img "/images/work/sso_title.jpg", { alt: "single sign on, sso, google apps" }
+              ul
+                li Ruby,
+                li Rails,
+                li EC2
+
+        div#work-hover-template
+          div.details View Details
+        div#modal-parent.row
+          div#work-modal class="modal hide fade" tabindex="-1" role="dialog"
+            div.modal-body
+
+  div.row
+    div class="about span12"
+      div.section-bg-layer
+        == img "/images/about_background_1x1.jpg", { class: "left bg" }
+        == img "/images/about_background_1x1.jpg", { class: "middle bg" }
+        div.right
+      div.section-top-layer
+        a#about
+        div.row
+          div.span12
+            h1 ABOUT US
+        div.row
+          div.span12
+            div.title About 7x7 Labs
+          div.span4
+            p 7x7 Labs team memebers have rescued massive fortune 500 projects, created AJAX and SAAS applications before the categories were defined, and taken dozens of products from whiteboard (or cocktail napkin) to production.
+          div.span4
+            p We have experience in many different domains: payment processing, online video, corporate financial processes, pharma revenue modeling, marketplace and distribution logistics... too many to list.
+          div.span4
+            p 7x7 practices `Agile Development`. 7x7 gets agile by coding features quickly and focusing on the feedback loop. 7x7 finds this to keep projects on track and clients happy.
+        div.row
+          div.span12
+            div.title About the Team
+        div.row
+          div class="bio span4"
+            div.bio-container
+              == img "/images/james_headshot.jpg", { class: 'bio-headshot' }
+              div.headline
+                h2.bio-name James Michels
+                h4.bio-title Co-founder, CEO
+              p Son of two Systems Engineers at IBM, James has computing in his blood.
+              p He got his CS Degree at Tufts and has helped build more than a dozen startups. James's skillset includes hands on coding, systems architecture, product management, and engineering team leadership.
+              p When he's not staring at a screen, James likes sliding around on boards - kiteboards in particular.
+              div.logos
+                a href="http://www.twitter.com/splap" target="_"
+                  == img "/images/twitter_icon_blue.png"
+                a href="http://www.linkedin.com/in/jmichels" target="_"
+                  == img "/images/linkedin_icon_blue.png"
+          div class="bio span4"
+            div.bio-container
+              == img "/images/bill_headshot.jpg", { class: 'bio-headshot' }
+              div.headline
+                h2.bio-name Bill Mers
+                h4.bio-title Co-founder, CTO
+              p Bill has been programming since he was nine, and has 15 years professional experience working with everything from tiny startups to fortune 50 companies. Prior to co-founding 7x7 Labs, he lived and worked in Japan bringing SaaS and IaaS platforms to the enterprise.
+              p In his spare time, he enjoys breakfast food, playing guitar poorly, and brown liquor. Bill graduated from Tufts University with degrees in Computer Science and International Relations.
+              div.logos
+                a href="http://www.twitter.com/billmers" target="_"
+                  == img "/images/twitter_icon_blue.png"
+                a href="http://www.linkedin.com/in/billmers" target="_"
+                  == img "/images/linkedin_icon_blue.png"
+          div class="bio span4"
+            div.bio-container
+              == img "/images/dj_headshot.jpg", { class: 'bio-headshot' }
+              div.headline
+                h2.bio-name DJ Carey
+                h4.bio-title Chief Creative Officer
+              p In his 15 year career, DJ has created award-winning ad campaigns and interactive experiences for some of the world’s most recognizable consumer and technology brands. His hands-on, open-channel approach to the creative process ensures that each and every project tells a unique story, engages its audience and elevates the brand.
+              p When the sun goes down, DJ creates static and motion-based artwork that explores the ever-expanding space where art and technology intersect.
+              div.logos
+                a href="http://www.twitter.com/deejcarey" target="_"
+                  == img "/images/twitter_icon_blue.png"
+                a href="http://www.linkedin.com/in/deejcarey" target="_"
+                  == img "/images/linkedin_icon_blue.png"
+
+  div.row
+    div class="contact span12"
+      div.section-bg-layer
+        img class="left bg" src="/images/contact_background_1x1.jpg"
+        img class="middle bg" src="/images/contact_background_1x1.jpg"
+        div.right
+      div.section-top-layer
+        a#contact
+        div.row
+          div.span12
+            h1 CONTACT
+        div class="row content-row"
+          div.span6
+            div id="map_canvas"
+          div.span6
+            form
+              input type="text" placeholder="Name" name="name"
+              input type="text" placeholder="Email" name="email"
+              textarea rows="4" placeholder="Message" name="message"
+              input class="submit btn btn-large" type="button" value="SEND" id="contact-button"
+            p.address
+              | P: (415) 548-1069
+              br
+              | E: info@7x7labs.com
+            p.address
+              | 455 Vallejo St
+              br
+              | San Francisco, CA 94133
+
+  div.row
+    div class="footer span12"
+      div.section-bg-layer
+        == img "/images/footer_background_1x1.jpg", { class: "left bg" }
+        == img "/images/footer_background_1x1.jpg", { class: "middle bg" }
+        div.right
+      div.section-top-layer
+        a#footer
+        div.row
+          div class="span6 logo"
+            == img "/images/7x7_white_no_dots_trans_back_200x46.png", { class: 'logo' }
+            span.copyright © 2013 7x7 Labs.  All rights reserved.
+          div class="span6 social"
+            div
+              a href="http://www.linkedin.com/company/3509328"
+                == img "/images/linkedin_icon_blue_big.png"
+              a href="https://twitter.com/7x7Labs"
+                == img "/images/twitter_icon_blue_big.png"
+            
+
+
+
+
+script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"
+
+javascript:
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28082621-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  function foobar(el) { setTimeout(function() {
+    // hack so i can set bp and stop js after 2000ms
+    console.log('foobar');
+  }, 2000); }
+
+  foobar();
+
+div.img-preload
+  == img '/images/work/arc9_logo.jpg'
+  == img '/images/work/arc9_story.jpg'
+  == img '/images/work/arc9_title.jpg'
+  == img '/images/work/enrapt_logo.jpg'
+  == img '/images/work/enrapt_story.jpg'
+  == img '/images/work/enrapt_title.jpg'
+  == img '/images/work/livefyre_logo.jpg'
+  == img '/images/work/livefyre_story.jpg'
+  == img '/images/work/livefyre_title.jpg'
+  == img '/images/work/smile_logo.jpg'
+  == img '/images/work/smile_story.jpg'
+  == img '/images/work/smile_title.jpg'
+  == img '/images/work/sso_logo.jpg'
+  == img '/images/work/sso_story.jpg'
+  == img '/images/work/sso_title.jpg'
+  == img '/images/work/stealthy_logo.jpg'
+  == img '/images/work/stealthy_story.jpg'
+  == img '/images/work/stealthy_title.jpg'
+  == img '/images/work/tpc_logo.jpg'
+  == img '/images/work/tpc_story.jpg'
+  == img '/images/work/tpc_title.jpg'
+  == img '/images/work/whatsgood_logo.jpg'
+  == img '/images/work/whatsgood_story.jpg'
+  == img '/images/work/whatsgood_title.jpg'

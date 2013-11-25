@@ -1,0 +1,42 @@
+div#modal-container data-client-name='stealth'
+  div#modal-header
+    | Stealthy Co.
+    a.close
+    a.next
+    a.prev
+  div#work-cats
+    span
+      h3 Services
+      ul
+        li Architecture,
+        li Development Lead
+        / li Contract Development Lead
+    span
+      h3 Platforms
+      ul
+        li App Engine
+    span
+      h3 Technologies
+      ul
+        li Python,
+        li CoffeeScript,
+        li Stylus,
+        li Backbone,
+        li Flask,
+        li Brunch,
+        li Handlebars
+  div.clearfix
+  p.summary
+    | A stealth mode startup in the Bay Area had a hard delivery date and was in the midst of rebuilding their development team overseas. They came to 7x7 seeking a resource who could come onsite and make core contributions from day one.
+  img src="/images/work/stealthy_story.jpg" alt="to stealth for alt"
+  h2 Overview
+  p.description
+    | 7x7 assisted in the development of multiple Single Page Applications which communicated with a JSON API hosted on Google's App Engine. We wrote (or rewrote) a significant portion of the backend with Google's NoSQL datastore API's. Performance increases were achieved by performing the majority of work asynchronously via task queues and result caching. Response times for server requests were often reduced by more than 80%. Records were prefetched on the front and back ends, so users' requests appeared to be taking pace in real time in the browser, without the latency of a server roundtrip.
+  p.description
+    | We also designed and implemented a REST API for external clients, developed MapReduce jobs to grind through gigs of analytics data, and optimized performance on legacy browsers.
+  div.bottom-nav
+    span
+      a.prev
+    span
+      a.next
+== render :slim, :'work/_related', locals: { foo: 'bar' }

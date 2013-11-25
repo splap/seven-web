@@ -1,0 +1,48 @@
+div#modal-container data-client-name='whatsgood'
+  div#modal-header
+    | WhatsGOOD
+    a.close
+    a.next
+    a.prev
+  div#work-cats
+    span
+      h3 Services
+      ul
+        li Architecture,
+        li Development,
+        li UX Design
+    span
+      h3 Platforms
+      ul
+        li iOS
+    span
+      h3 Technologies
+      ul
+        li Objective-C
+  div.clearfix
+  p.summary
+    | WhatsGOOD hired 7x7 to build their flagship iPhone application from the ground up.  Handling project management, development, and design, we took the product from concept to app store submission in six weeks.
+  img src="/images/work/whatsgood_story.jpg" alt="screen shots whatsgood iOS app"
+  h2 Overview
+  p.description
+    | The WhatsGOOD mobile app allows users to find popular dishes at every restaurant in the US according to diet, allergy restriction, or lifestyle.  Starting with the initial wireframes, 7x7's designers fleshed out the look and feel of the app and created polished comps.  Development began immediately, using Agile methodologies to continuously deliver testable software in short sprints.
+  a href="https://itunes.apple.com/ca/app/whats-good-here/id668263171" See WhatsGOOD in the App Store
+  div#quote
+    span#quote-headshot
+      img src="/images/tim_headshot.png"
+    span#quote-arrow
+      img src="/images/quote_arrow.png"
+    span#quote-body
+      p
+        | “7x7 was a dream to work with, and their iOS skills are top of market from everything I've seen.  And best, their capabilities extended way beyond mobile development.”
+      p
+        | – Tim Shea
+        br
+        | CTO &amp; Founder, WhatsGood
+  div.clearfix
+  div.bottom-nav
+    span
+      a.prev
+    span
+      a.next
+== render :slim, :'work/_related', locals: { foo: 'bar' }

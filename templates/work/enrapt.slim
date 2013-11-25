@@ -1,0 +1,49 @@
+div#modal-container data-client-name='enrapt'
+  div#modal-header
+    | Enrapt
+    a.close
+    a.next
+    a.prev
+  div#work-cats
+    span
+      h3 Services
+      ul
+        li Development
+    span
+      h3 Platforms
+      ul
+        li IE,
+        li iOS
+    span
+      h3 Technologies
+      ul
+        li Objective-C,
+        li Javascript,
+        li jQuery
+  div.clearfix
+  p.summary
+    | Enrapt engaged 7x7 Labs to handle development of quote generation tools for a fortune 50 insurance company in Tokyo.
+  img src="/images/work/enrapt_story.jpg" alt="japanese corporate software consulting"
+  h2 Overview
+  p.description
+    | We implemented iOS and browser based quote generation applications on time and under budget. These applications incorporated significant business logic in the front end with Objective-C and Javascript, communicated securely with legacy backend services, and provided on-the-spot quotes to potential clients.
+  div#quote
+    span#quote-headshot
+      img src="/images/kent_headshot.png"
+      / img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/2152_61154787436_2347_n.jpg"
+    span#quote-arrow
+      img src="/images/quote_arrow.png"
+    span#quote-body
+      p
+        | “7x7は他のコンサル会社とはちがっていて、自分たちのプロセスとアイディアで仕事しています。一緒に仕事したこといい経験でした。もう一度一緒に仕事したいです。”
+      p
+        | – Kent Horng
+        br
+        | Chief Architect, Enrapt
+  div.clearfix
+  div.bottom-nav
+    span
+      a.prev
+    span
+      a.next
+== render :slim, :'work/_related', locals: { foo: 'bar' }

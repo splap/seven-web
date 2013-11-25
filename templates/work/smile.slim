@@ -1,0 +1,52 @@
+div#modal-container data-client-name='smile'
+  div#modal-header
+    | Smile by Webshots
+    a.close
+    a.next
+    a.prev
+  div#work-cats
+    span
+      h3 Services
+      ul
+        / li Agile Development,
+        / li API Architecture,
+        li Architecture,
+        li Development,
+        li DevOps
+    span
+      h3 Platforms
+      ul
+        li iOS,
+        li AWS
+    span
+      h3 Technologies
+      ul
+        li Rails,
+        li Redis,
+        li REST,
+        li Chef,
+        li Objective-C,
+        li Sidekiq
+  div.clearfix
+  p.summary
+    | 7x7 worked closely with Smile's founding team to deliver on their vision in a date driven enviornment. We assisted in the development of a REST API, backend services, and a mobile client.
+  img src="/images/work/smile_story.jpg" alt="family photo sharing"
+  div#quote
+    span#quote-headshot
+      img src="/images/mike_headshot.png"
+    span#quote-arrow
+      img src="/images/quote_arrow.png"
+    span#quote-body
+      p
+        | “7x7 Labs was invaluable at the formation of Threefold Photos in helping our CTO build the framework of our service. We had just acquired Webshots and had a limited time to architect a new photo service before millions of users were pointed to our servers. They are highly talented engineers that take pleasure in solving the hardest technical challenges. In our first day of service, we transitioned more users and photos than we ever imagined -- and a big part of this success was due in part to the quality of their code. In addition to being excellent developers, they are consummate professionals. 7x7 Labs can be counted on to deliver; they acted more as team members than outside consultants with an eye on their next gig. We've since hired a full team that they helped onboard, but I look forward to the day that I can work with 7x7 again.”
+      p
+        | – Mike Sitrin
+        br
+        | CEO, Smile By Webshots
+  div.clearfix
+  div.bottom-nav
+    span
+      a.prev
+    span
+      a.next
+== render :slim, :'work/_related', locals: { foo: 'bar' }

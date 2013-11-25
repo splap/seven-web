@@ -1,0 +1,39 @@
+div#modal-container data-client-name='sso'
+  div#modal-header
+    | Google Apps SSO
+    a.close
+    a.next
+    a.prev
+  div#work-cats
+    span
+      h3 Services
+      ul
+        li Architecture,
+        li Development
+        li Product Design
+    span
+      h3 Platforms
+      ul
+        li AWS,
+        li Google Apps,
+        li Windows,
+        li Ubuntu
+    span
+      h3 Technologies
+      ul
+        li Ruby on Rails,
+        li ActiveDirectory,
+        li LDAP
+  div.clearfix
+  p.summary
+    | An independent software vendor approached 7x7 to build a cloud based single sign-on (SSO) solution for Google Apps.
+  img src="/images/work/sso_story.jpg" alt="google apps domains sso multitenant"
+  h2 Overview
+  p.description
+    | An ISV had developed a single sign-on solution that required customers to install and manage infrastructure inside their datacenter, and as business grew so did support and maintenance challenges.  7x7 recommended and implemented a multi-tenant, cloud based solution built on Amazon Web Services and Ruby on Rails.  This solution hosted all customers in scalable environment, and allowed staff to onboard and administer installations through a unified web interface.
+  div.bottom-nav
+    span
+      a.prev
+    span
+      a.next
+== render :slim, :'work/_related', locals: { foo: 'bar' }

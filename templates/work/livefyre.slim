@@ -1,0 +1,42 @@
+div#modal-container data-client-name='livefyre'
+  div#modal-header
+    | Livefyre
+    a.close
+    a.next
+    a.prev
+  div#work-cats
+    span
+      h3 Services
+      ul
+        li Development
+    span
+      h3 Platforms
+      ul
+        li iOS
+    span
+      h3 Technologies
+      ul
+        li Objective-C
+  div.clearfix
+  p.summary
+    | 7x7 developed an iOS client for Livefyre. It was written as an Objective-C Framework, with unit tests and documentation, satisfying each of the project goals. The framework is used in production today.
+  img src="/images/work/livefyre_story.jpg" alt="web and mobile commenting platform"
+  div#quote
+    span#quote-headshot
+      img src="/images/nate_headshot.jpg" alt="headshot nate"
+    span#quote-arrow
+      img src="/images/quote_arrow.png"
+    span#quote-body
+      p
+        | “7X7 Labs was a key partner to us as we built out our iOS SDK for StreamHub. Their speed, efficiency and professionalism were critical in helping us deliver this project on time and in budget.”
+      p
+        | – Nate Underwood
+        br
+        | CTO, LiveFyre
+  div.clearfix
+  div.bottom-nav
+    span
+      a.prev
+    span
+      a.next
+== render :slim, :'work/_related', locals: { foo: 'bar' }
