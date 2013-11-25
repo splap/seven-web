@@ -32,20 +32,9 @@ class App < Sinatra::Base
   get "/" do
     slim :seven
   end
-  get "/seven.html" do
-    slim :seven
-  end
   
   get "/work/:name" do |name|
     slim :"work/#{name}", :layout => false
-  end
-
-  get '/foo' do
-    slim :foo
-  end
-
-  get '/bah' do
-    slim :bah, :layout => false
   end
 
   get "/heartbeat.html" do

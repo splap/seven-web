@@ -163,10 +163,6 @@ handlePageWidth = (forceSetWidth = false) ->
   else if window.innerWidth > 980
     #console.log 'outside 980 grid: ' + window.innerWidth
     bgWidth = (window.innerWidth - 980) / 2
-   
-    # if $.browser.mozilla
-    #   bgWidth = bgWidth - 2
-    #   console.log 'zillllllaaaa'
   else
     bgWidth = 0
 
