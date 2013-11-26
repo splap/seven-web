@@ -14,6 +14,7 @@ GEM
       thor (>= 0.13.6)
     jsmin (1.0.1)
     json (1.8.0)
+    libv8 (3.16.14.3)
     multi_json (1.7.3)
     newrelic_rpm (3.6.2.96)
     puma (2.0.1)
@@ -23,6 +24,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    ref (1.0.5)
     sass (3.2.9)
     sinatra (1.4.2)
       rack (~> 1.5, >= 1.5.2)
@@ -37,6 +39,9 @@ GEM
       temple (~> 0.3.0)
       tilt (~> 1.2)
     temple (0.3.5)
+    therubyracer (0.12.0)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.18.1)
     tilt (1.4.1)
     uglifier (2.1.2)
@@ -57,4 +62,5 @@ DEPENDENCIES
   sinatra
   sinatra-assetpack
   slim
+  therubyracer
   uglifier

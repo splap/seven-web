@@ -27,7 +27,7 @@ class App < Sinatra::Base
   # Pretty-print HTML in all environments.  A bit slower, but we want the source to look nice.
   Slim::Engine.set_default_options :pretty => true, :sort_attrs => false
 
-  set :views, settings.root + '/templates'
+  set :views, settings.root + 'templates'
 
   get "/" do
     slim :seven
