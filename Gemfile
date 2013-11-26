@@ -12,6 +12,7 @@ gem "slim"
 gem "json"
 gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
 gem "awesome_print"
+gem "therubyracer"
 
 group :development do
   gem "foreman"
