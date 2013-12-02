@@ -1,34 +1,16 @@
 #!/usr/bin/env puma
 
-pidfile "/var/www/fogdemo/tmp/puma/pid"
-state_path "/var/www/fogdemo/tmp/puma/state"
-activate_control_app
-directory '/var/www/fogdemo'
-rackup '/var/www/fogdemo/config.ru'
-bind 'tcp://0.0.0.0:3000'
-
 # The directory to operate out of.
 #
 # The default is the current directory.
 #
-# directory '/u/apps/lolcat'
-
-# Use an object or block as the rack application. This allows the
-# config file to be the application itself.
-#
-# app do |env|
-#   puts env
-#
-#   body = 'Hello, World!'
-#
-#   [200, { 'Content-Type' => 'text/plain', 'Content-Length' => body.length.to_s }, [body]]
-# end
+directory '/var/www/fogdemo'
 
 # Load “path” as a rackup file.
 #
 # The default is “config.ru”.
 #
-# rackup '/u/apps/lolcat/config.ru'
+rackup '/var/www/fogdemo/config.ru'
 
 # Set the environment in which the rack's app will run. The value must be a string.
 #
@@ -42,16 +24,16 @@ bind 'tcp://0.0.0.0:3000'
 # The default is “false”.
 #
 # daemonize
-# daemonize false
+daemonize true
 
 # Store the pid of the server in the file at “path”.
 #
-# pidfile '/u/apps/lolcat/tmp/pids/puma.pid'
+pidfile "/var/www/fogdemo/tmp/puma/pid"
 
 # Use “path” as the file to store the server info state. This is
 # used by “pumactl” to query and control the server.
 #
-# state_path '/u/apps/lolcat/tmp/pids/puma.state'
+state_path "/var/www/fogdemo/tmp/puma/state"
 
 # Redirect STDOUT and STDERR to files specified. The 3rd parameter
 # (“append”) specifies whether the output is appended, the default is
@@ -109,7 +91,7 @@ bind 'tcp://0.0.0.0:3000'
 #
 # The default is “0”.
 #
-# workers 2
+workers 4
 
 # Code to run when a worker boots to setup the process before booting
 # the app.
